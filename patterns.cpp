@@ -1,284 +1,309 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int rectanglePattern(int rows,int columns){
+int rectanglePattern(int rows, int columns)
+{
 
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
         {
-            cout<<"*";
+            cout << "*";
         }
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }
 
-int hollowRectanglePattern(int rows,int columns){
+int hollowRectanglePattern(int rows, int columns)
+{
     for (int i = 1; i <= rows; i++)
     {
         for (int j = 1; j <= columns; j++)
         {
             if (i == 1 || i == rows)
             {
-                cout<<"*";
+                cout << "*";
             }
-            else if (j==1 || j==columns)
+            else if (j == 1 || j == columns)
             {
-                cout<<"*";
+                cout << "*";
             }
             else
             {
-                cout<<" ";
+                cout << " ";
             }
         }
-            cout<<endl;    
+        cout << endl;
     }
     return 0;
 }
 
-int invertedHalfPyramid(int a){
-    for (int i = a; i >0; i--)
+int invertedHalfPyramid(int a)
+{
+    for (int i = a; i > 0; i--)
     {
-        for (int  j = 0; j <i; j++)
+        for (int j = 0; j < i; j++)
         {
-            cout<<"* ";
+            cout << "* ";
         }
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }
 
-int halfPyramidAfterRotation(int a){
+int halfPyramidAfterRotation(int a)
+{
     for (int i = 1; i <= a; i++)
     {
-        for (int j = 1; j <=a; j++)
+        for (int j = 1; j <= a; j++)
         {
-           if(j<=a-i){
-            cout<<"  ";
-           }else{
-            cout<<"* ";
-           }
+            if (j <= a - i)
+            {
+                cout << "  ";
+            }
+            else
+            {
+                cout << "* ";
+            }
         }
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }
 
-int perfectPyramid(int a){
+int perfectPyramid(int a)
+{
     for (int i = 1; i <= a; i++)
     {
-        for (int j = 1; j <=a; j++)
+        for (int j = 1; j <= a; j++)
         {
-           if(j<=a-i){
-            cout<<" ";
-           }else{
-            cout<<"* ";
-           }
+            if (j <= a - i)
+            {
+                cout << " ";
+            }
+            else
+            {
+                cout << "* ";
+            }
         }
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }
 
-int halfpyramidUsingNumbers(int n){
+int halfpyramidUsingNumbers(int n)
+{
     for (int i = 1; i <= n; i++)
     {
-        for (int j = 1; j <=i; j++)
+        for (int j = 1; j <= i; j++)
         {
-            cout<<i<<" ";
+            cout << i << " ";
         }
-        cout<<endl;
-    } 
+        cout << endl;
+    }
 }
 
-int floydTriangle(int n){
-    int count=1;
-    for (int i = 1; i <=n; i++)
+int floydTriangle(int n)
+{
+    int count = 1;
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 1; j <=i; j++)
+        for (int j = 1; j <= i; j++)
         {
-            cout<<count<<" ";
+            cout << count << " ";
             count++;
         }
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }
 
-int butterflypattern(int n){
+int butterflypattern(int n)
+{
     for (int i = 1; i <= n; i++)
     {
-        for (int j = 1; j <=i; j++)
+        for (int j = 1; j <= i; j++)
         {
-            cout<<"*";
+            cout << "*";
         }
-        int space = 2*n -2*i;
-        for (int  j = 1; j <= space; j++)
+        int space = 2 * n - 2 * i;
+        for (int j = 1; j <= space; j++)
         {
-            cout<<" ";
+            cout << " ";
         }
-        for (int j = 1; j <=i; j++)
+        for (int j = 1; j <= i; j++)
         {
-           cout<<"*";
+            cout << "*";
         }
-        cout<<endl;    
+        cout << endl;
     }
 
     for (int i = n; i >= 1; i--)
     {
-        for (int j = 1; j <=i; j++)
+        for (int j = 1; j <= i; j++)
         {
-            cout<<"*";
+            cout << "*";
         }
-        int space = 2*n -2*i;
-        for (int  j = 1; j <= space; j++)
+        int space = 2 * n - 2 * i;
+        for (int j = 1; j <= space; j++)
         {
-            cout<<" ";
+            cout << " ";
         }
-         for (int j = 1; j <=i; j++)
-         {
-            cout<<"*";
-         }
-         cout<<endl;    
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
     }
     return 0;
 }
 
-int invertedPattern(int n){
-    for (int i = n; i >=1; i--)
+int invertedPattern(int n)
+{
+    for (int i = n; i >= 1; i--)
     {
-        for (int j = 1; j <=i; j++)
+        for (int j = 1; j <= i; j++)
         {
-            cout<<j<<" ";
+            cout << j << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }
 
-int zeroOnePattern(int n){
-    for (int i = 1; i <=n; i++)
+int zeroOnePattern(int n)
+{
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 1; j <=i; j++)
+        for (int j = 1; j <= i; j++)
         {
-            if((i+j)%2==0){
-                cout<<1<<" ";
-            }else{
-                cout<<0<<" ";
-            }
-        }
-        cout<<endl;
-    }
-}
-
-int RhombusPattern(int n){
-    for (int i = 1; i <=n; i++)
-    {
-        for (int j = 1; j <=n-i; j++)
-        {
-            cout<<" ";
-        }
-        for (int j = 1; j <=n; j++)
-        {
-            cout<<"* ";
-        }
-        cout<<endl;
-    } 
-    return 0;
-}
-
-int numberPyramidPattern(int n){
-    for (int i = 1; i <=n; i++)
-    {
-        for (int j = 1; j <=n-i; j++)
-        {
-            cout<<" ";
-        }
-        for (int j = 1; j <=i; j++)
-        {
-            cout<<j<<" ";
-        }
-        for (int j = 1; j <=n-i; j++)
-        {
-            cout<<" ";
-        } 
-        cout<<endl;
-    } 
-}
-
-int pallindromicPattern(int n){
-    for (int i = 1; i <=n; i++)
-    {
-        for (int j = 1; j <=n-i; j++)
-        {
-            cout<<"  ";
-        }
-        for (int j = i; j >1; j--)
-        {
-            cout<<j<<" ";
-        }
-        for (int j = 1; j <=i; j++)
-        {
-            cout<<j<<" ";
-        }
-        for (int j = 1; j <=n-i; j++)
-        {
-            cout<<" ";
-        } 
-        cout<<endl;
-    }
-    return 0;
-}
-
-int starPattern(int n){
-    for (int i = 1; i <=n; i++)
-    {
-      for (int j = 1; j <=n-i; j++)
-        {
-            cout<<"  ";
-        }
-        for (int j = 1; j <=i*2-1; j++)
-        {
-            cout<<" *";
-        }
-        cout<<endl;  
-    }
-    for (int i = n; i >=1; i--)
-    {
-      for (int j = 1; j <=n-i; j++)
-        {
-            cout<<"  ";
-        }
-        for (int j = 1; j <=i*2-1; j++)
-        {
-            cout<<" *";
-        } 
-        cout<<endl;  
-    } 
-}
-
-int zigzag(int n){
-    for (int i = 1; i <=3; i++)
-    {
-        for (int j = 1; j <=n; j++)
-        {
-            if (((i+j)%4==0) || (i==2 && j%4==0))
+            if ((i + j) % 2 == 0)
             {
-                cout<<"* ";
-            }else{
-                cout<<"  ";
+                cout << 1 << " ";
+            }
+            else
+            {
+                cout << 0 << " ";
             }
         }
-        cout<<endl;   
-    } 
+        cout << endl;
+    }
 }
 
+int RhombusPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= n; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+int numberPyramidPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+
+int pallindromicPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = i; j > 1; j--)
+        {
+            cout << j << " ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+int starPattern(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = 1; j <= i * 2 - 1; j++)
+        {
+            cout << " *";
+        }
+        cout << endl;
+    }
+    for (int i = n; i >= 1; i--)
+    {
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "  ";
+        }
+        for (int j = 1; j <= i * 2 - 1; j++)
+        {
+            cout << " *";
+        }
+        cout << endl;
+    }
+}
+
+int zigzag(int n)
+{
+    for (int i = 1; i <= 3; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            if (((i + j) % 4 == 0) || (i == 2 && j % 4 == 0))
+            {
+                cout << "* ";
+            }
+            else
+            {
+                cout << "  ";
+            }
+        }
+        cout << endl;
+    }
+}
 
 int main()
 {
-    rectanglePattern(4,4);
-    hollowRectanglePattern(4,4);
+    rectanglePattern(4, 4);
+    hollowRectanglePattern(4, 4);
     invertedHalfPyramid(5);
     halfPyramidAfterRotation(5);
     perfectPyramid(5);

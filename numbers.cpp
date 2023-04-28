@@ -62,6 +62,16 @@ int factorial(int n){
     // cout<<fac;
     return fac;
 }
+
+int gretestCommonFactor(int a, int b){
+    while(b!=0){
+        int rem=a%b;
+        a=b;
+        b=rem;
+    }
+    return a;
+}
+
 int nCr(int n,int r){
 // FIND THE PROBLEM IF VISITED AGAIN BY UNCODE cout<<fac;
     // int a = factorial(4);
@@ -85,7 +95,18 @@ int pascalTriangle(int n){
 }
 
 int sumOfn(int n){
+ int sum = 0;
+ for (int i = 0; i < n+1; i++) {
+sum = sum + i;
+}
+cout<<sum<<endl;
+}
 
+int divisible(int n, int a, int b){
+    int c1 = n/a;
+    int c2 = n/b;
+    int c3 = n/(a*b);
+    return c1+c2-c3;
 }
 
 int pythogorianTriplet(int a,int b,int c){
@@ -115,12 +136,15 @@ int decToHexadecimal(int n){
 
 int main()
 {
-    reverseTheNumber(1244);
-    sumOfDigit(345);
+    // reverseTheNumber(1244);
+    // sumOfDigit(345);
     // armstrongNumber(153);
     // fibbonacci(10);
+    // cout<<gretestCommonFactor(30,45);
     // cout<<factorial(4);
     // nCr(5,2);
     // pascalTriangle(5);
+    cout<<divisible(3,4,5);
+
     return 0;
 }
