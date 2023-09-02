@@ -1,0 +1,16 @@
+{
+  "window.zoomLevel": 0,
+  "timeline.pageSize": 1,
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "cpp": "g++ $fileNameWithoutExt.cpp -o $fileNameWithoutExt && ./$fileNameWithoutExt.exe"
+  },
+  "code-runner.ignoreSelection": true,
+  "code-runner.defaultLanguage": "C++",
+  "files.associations": {
+    "*.ejs": "html",
+    "iostream": "cpp",
+    "ostream": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "disabled"
+}
